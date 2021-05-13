@@ -1,0 +1,19 @@
+<h2><%= @list.name %></h2>
+
+<div class="form">
+ <% simple_form_for([@bookmarks, @list]) do |f| %>
+    <%= f.input collection: :movies %>
+    <%= f.submit %>
+ <% end %>
+</div>
+
+<div class="container">
+  <% @list.movies.each do |movie| %>
+    <div class="card">
+      <img src="movie.poster_url" alt="">
+      <p><%= movie.title %></p>
+      <p><%= movie.overview %></p>
+      <p><%= movie.rating %></p>
+    </div>
+  <% end %>
+</div>

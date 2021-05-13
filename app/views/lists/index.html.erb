@@ -1,0 +1,10 @@
+<h1>Lists</h1>
+
+<p><%= link_to "New List", new_list_path %></p>
+
+<% @lists.each do |list| %>
+  <div class="card" style="width: 250px">
+  <img class="card-img-top" src="https://cdn.britannica.com/90/99190-050-A68AC8B1/Leonardo-DiCaprio-The-Departed-Jack-Nicholson-Martin.jpg" style="width: 200px" alt="departed">
+  <p><%= link_to list.name, list %></p>
+  </div>
+<% end %>
