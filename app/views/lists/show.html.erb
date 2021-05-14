@@ -1,11 +1,11 @@
-<h2><%= @list.name %></h2>
-
-<div class="form">
- <% simple_form_for([@bookmarks, @list]) do |f| %>
-    <%= f.input collection: :movies %>
-    <%= f.submit %>
- <% end %>
+<div class="banner" id="second" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1619473667776-48cd8e52d380?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIxMDA0ODI5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+    <%= link_to 'Add Movie', new_list_bookmark_path(@list), class: 'btn btn-outline-primary' %>
+    <%= link_to 'Home', lists_path, class: 'btn btn-outline-primary' %>
+  </div>
 </div>
+
 
 <div class="container">
   <% @list.movies.each do |movie| %>

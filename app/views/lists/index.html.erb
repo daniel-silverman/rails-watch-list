@@ -1,10 +1,17 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.redd.it/vr49fjmt00m51.jpg);">
+  <div class="container">
+    <h1>Movie Lists</h1>
+    <!-- <a class="btn btn-flat" href="#">Apply now</a> -->
+    <p><%= link_to "New List", new_list_path, class:"btn btn-outline-primary my-3" %></p>
+  </div>
+</div>
 
-<p><%= link_to "New List", new_list_path %></p>
+<!-- <h1>Lists</h1> -->
+
 
 <% @lists.each do |list| %>
   <div class="card" style="width: 250px">
-  <img class="card-img-top" src="https://cdn.britannica.com/90/99190-050-A68AC8B1/Leonardo-DiCaprio-The-Departed-Jack-Nicholson-Martin.jpg" style="width: 200px" alt="departed">
+  <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-1619473667776-48cd8e52d380?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIxMDA0ODI5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source"> -->
   <p><%= link_to list.name, list %></p>
   </div>
 <% end %>
